@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jua:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title> Citas </title>
+</head>
+
+<header>
+    <h1 align="Center"> Citas - Consultorio KirbyMed</h1>
+    <img scr="logosinfondo.png">
+</header>
+<body>
+    <h2> Para agendar una nueva cita, ingrese sus datos a continuación: </h2>
+    <main>
+        <div class="form-container">
+            <form action="citas.html" method="POST">
+                <div class="form-group">
+                    <label>Paciente:</label>
+                    <input type="text" name="paciente" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Médico asignado:</label>
+                    <input type="text" name="medico" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Fecha:</label>
+                    <input type="date" name="fecha" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Hora:</label>
+                    <input type="time" name="hora"  required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Motivo de Consulta:</label>
+                    <input type="text" name="motivo"  required>
+                </div>
+            
+                <div class="form-group">
+                    <label>Estatus:</label>
+                    <input type="text" name="estatus" placeholder="Ej: Pendiente" required>
+                </div>
+
+                <button type="submit" class="btn-submit"> Agendar Cita</button>
+            </form>
+        </div>
+    
+        <a href="index.html" class="btn-back"> Volver al Inicio</a>
+    </main>
+    
+
+</body>
+<style>
+    header{
+        background-color: rgb(245, 228, 242);
+        
+    }
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    h1{
+        color: rgb(0, 0, 0);
+        font-family:"Jua", sans-serif;
+    }
+    h2{
+        font-family:"Jua", sans-serif;
+    }
+    p{
+        font-family:"Poppins", sans-serif;
+    }
+    td{
+        font-family: "Poppins", sans-serif;
+    }
+    th{
+        font-family: "Poppins", sans-serif;
+    }
+        
+    .btn-back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #b2d6f8;
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .btn-back:hover {
+      background-color: #ffb7d5;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+</style>
+</div>
+
+<a href="index.html" class="btn-back">← Volver al Inicio</a>
+</main>
+<footer>
+    <p align=" center">Luna Arias Meredith Aranza- Programación </p>
+    <p align="center"> 24308051280589 - 4-I</p>
+</footer>
+</html>

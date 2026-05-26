@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacientes - Kirby Med</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <body> 
+    <p> Ingrese sus datos a continuación para darle de alta en el sistema. </p>
+    <img scr=" logosinfondo.png">
+
+    <main>
+      <div class="form-container">
+          <form action="pacientes.html" method="POST">
+              <div class="form-group">
+                  <label>ID del Paciente:</label>
+                  <input type="number" name="id_paciente" required>
+              </div>
+              
+              <div class="form-group">
+                  <label>Nombre:</label>
+                  <input type="text" name="nombre" required>
+              </div>
+              
+              <div class="form-group">
+                  <label>Apellidos:</label>
+                  <input type="text" name="apellidos" placeholder="Ej: Perez" required>
+              </div>
+              
+              <div class="form-group">
+                  <label>Sexo:</label>
+                  <input type="text" name="sexo" placeholder="Ej: Femenino" required>
+              </div>
+              
+              <div class="form-group">
+                  <label>Edad:</label>
+                  <input type="number" name="edad" placeholder="Ej: 21" required>
+              </div>
+          
+              <div class="form-group">
+                  <label>Teléfono:</label>
+                  <input type="number" name="telefono" placeholder="Ej: 555 555" required>
+              </div>
+  
+              <div class="form-group">
+                  <label>Fecha de Nacimiento:</label>
+                  <input type="date" name="fecha_nac" required>
+              </div>
+  
+              <div class="form-group">
+                  <label>Dirección:</label>
+                  <input type="text" name="direccion" placeholder="Ej: Calle Azul, #2376" required>
+              </div> 
+  
+              <button type="submit" class="btn-submit">Dar de alta al Paciente</button>
+          </form>
+      </div>
+  
+      <a href="index.html" class="btn-back"> Volver al Inicio</a>
+  </main>
+  
+
+
+  </body>
+  <style>
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #faf4f9; 
+      font-family: "Poppins", sans-serif;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    
+    header {
+      background-color: #f5dff0; 
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 3px solid #e1bee7;
+    }
+
+    header h1 {
+      font-family: "Jua", sans-serif;
+      color: #4a4a4a;
+      font-size: 2.2rem;
+    }
+
+    
+    main {
+      flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      font-family: "Jua", sans-serif;
+      text-align: center;
+      color: #ffb7d5; 
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 0px #fff, 2px 2px 0px #e1bee7;
+    }
+
+    
+    .table-container {
+      background-color: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(245, 223, 240, 0.6);
+      border: 2px solid #f5dff0;
+    }
+
+    
+    table {
+      width: 100%;
+      border-collapse: collapse; 
+      text-align: left;
+    }
+
+    
+    th {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      background-color: #b2d6f8; 
+      color: #2c3e50;
+      padding: 18px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    
+    td {
+      padding: 15px 18px;
+      border-bottom: 1px solid #f5dff0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    
+    tr:nth-child(even) {
+      background-color: #fdf8fc;
+    }
+
+    
+    tr:hover {
+      background-color: #f5dff0;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    
+    td:first-child {
+      font-weight: bold;
+      color: #ffb7d5;
+    }
+
+    
+    .btn-back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #b2d6f8;
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background-color: #ffb7d5;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    
+    footer {
+      background-color: #d6f8d3; 
+      padding: 15px;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 2px solid #bceaba;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pacientes del guapo y exitoso consultorio</h1>
+</header>
+
+<main>
+  <h2 class="section-title">Registros de Pacientes</h2>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>ID del Paciente</th>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Sexo</th>
+          <th>Edad</th>
+          <th>Teléfono</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Dirección</th>
+        </tr>
+        <tr>
+          <td> 001</td>
+    <td> Juan Alberto </td>
+    <td> García López </td>
+    <td> M </td>
+    <td> 22</td>
+    <td> 6604585</td>
+    <td> 11/06/04</td>
+    <td> Calle Sol #9080</td>
+</tr>
+
+<tr>
+    <td> 002</td>
+    <td> Ana María </td>
+    <td> Martínez Pérez </td>
+    <td> F </td>
+    <td> 17</td>
+    <td> 3543455</td>
+    <td> 08/10/09</td>
+    <td> Calle Luna #4010</td>
+</tr>
+
+<tr>
+    <td> 003</td>
+    <td> Luis Daniel </td>
+    <td> Zapata Ruíz </td>
+    <td> M </td>
+    <td> 32</td>
+    <td> 55654656</td>
+    <td> 12/03/89</td>
+    <td> Calle Raviolli #8012</td>
+</tr>
+
+<tr>
+    <td> 004</td>
+    <td>América</td>
+    <td> Rodriguez Torres </td>
+    <td> F </td>
+    <td> 17</td>
+    <td> 5676345</td>
+    <td> 11/06/09</td>
+    <td> Calle Rosa #9004</td>
+</tr>
+
+<tr>
+    <td> 005</td>
+    <td> Demián Alexander</td>
+    <td> Arias Suárez  </td>
+    <td> M </td>
+    <td> 19</td>
+    <td> 0845988</td>
+    <td> 04/12/06</td>
+    <td> Calle Arroyo #4018</td>
+        </tr>
+      </thead>
+      
+
+      </tbody>
+    </table>
+  </div>
+
+  <a href="index.html" class="btn-back">← Volver al Inicio</a>
+</main>
+  </div>
+
+  <a href="altas.html" class="btn-back"> Ingresar un nuevo Paciente </a>
+</main>
+
+  
+<footer>
+  <p><strong>Luna Arias Meredith Aranza</strong> - Programación</p>
+  <p>24308051280589 - 4-I</p>
+</footer>
+</body>
+</html>

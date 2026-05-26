@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Jua:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Doctores </title>
+</head>
+
+<header>
+    <h1 align="Center"> Doctores - KirbyMed </h1>
+    <p> Ingrese sus datos a contuniación para darle de alta en el sistema. </p>
+</header>
+<body>
+    <main>
+        <div class="form-container">
+            <form action="doctores.html" method="POST">
+                <div class="form-group">
+                    <label>Cédula del Doctor:</label>
+                    <input type="number" name="cedula" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Apellido Paterno:</label>
+                    <input type="text" name="apellidos" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Apellido Materno:</label>
+                    <input type="text" name="apellidos" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Nombre(s):</label>
+                    <input type="text" name="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Edad:</label>
+                    <input type="number"  maxlength="2" name="edad" placeholder="Ej: 21" required>
+                </div>
+            
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <input type="text"  maxlength="1" placeholder="Ej: M" required>
+                </div>
+    
+                <div class="form-group">
+                    <label>Jornada:</label>
+                    <select name="jornada" required>
+                        <option value="Matutina">Matutina</option>
+                        <option value="Vespertina">Vespertina</option>
+                        <option value="Nocturna">Nocturna</option>
+                        <option value="Completa">Completa</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label>Télefono:</label>
+                    <input type="number" name="telefono" placeholder="Ej: 564 345" required>
+                </div> 
+                <div class="form-group">
+                    <label>Sueldo Base:</label>
+                    <input type="number" name="sueldo"  required>
+                </div>
+                <div class="form-group">
+                    <label>Especialidad:</label>
+                    <input type="text" name="especialidad"  required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección:</label>
+                    <input type="text" name="direccion" placeholder="Ej: Calle Azul, #2376" required>
+                </div>
+                <button type="submit" class="btn-submit">Dar de alta al Paciente</button>
+            </form>
+        </div>
+    
+        <a href="index.html" class="btn-back"> Volver al Inicio</a>
+    </main>
+    
+
+</body>
+<style>
+    header{
+        background-color: rgb(245, 228, 242);
+        
+    }
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    h1{
+        color: rgb(0, 0, 0);
+        font-family:'Jua', sans-serif;
+    }
+    h2{
+        font-family:'Jua', sans-serif;
+    }
+    p{
+        font-family:'Poppins', sans-serif;
+    }
+    th{
+        font-family:'Poppins', sans-serif;
+    }
+    td{
+        font-family:'Poppins', sans-serif;
+    }
+        
+    .btn-back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #b2d6f8;
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .btn-back:hover {
+      background-color: #ffb7d5;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+</style>
+</div>
+
+<a href="index.html" class="btn-back">← Volver al Inicio</a>
+</main>
+<footer>
+    <p align=" center">Luna Arias Meredith Aranza- Programación </p>
+    <p align="center"> 24308051280589 - 4-I</p>
+</footer>
+</html>
